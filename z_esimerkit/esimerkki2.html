@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testing JavaScript</title>
+</head>
+<body>
+
+<h1>Greeting</h1>
+<p id="target"></p>
+
+<script >
+  'use strict';
+
+  let oikealuku;
+  let arvattuluku, uusi;
+  //console.log(oikealuku);
+
+do {
+  oikealuku = Math.floor(Math.random()*10)+1;
+
+  do {
+    arvattuluku = parseInt(prompt('arvaa luku (0 - 10)'));
+
+    if (arvattuluku > oikealuku) {
+      console.log('antamasi luku oli liian suuri.');
+    } else if (arvattuluku < oikealuku) {
+      console.log('antamasi luku oli liian pieni.');
+    } else {
+      console.log('Oikein voiti pelin!!');
+    }
+  } while (arvattuluku != oikealuku);
+
+  uusi = prompt('haluatko jatkaa (k/e)')
+
+} while(uusi==='k')
+
+</script>
+
+</body>
+</html>

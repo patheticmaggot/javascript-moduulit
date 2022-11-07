@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testing JavaScript</title>
+</head>
+<body>
+
+<h1>Greeting</h1>
+<p id="target"></p>
+
+<script >
+  'use strict';
+
+  let lounaanHinta = -1.0;
+
+  const vastaus = prompt('oletko (O) opiskelija, Henkilökunta (H) vai muu asiakas (M)');
+  const asiakastyyppi = vastaus.toLowerCase();
+
+  switch (asiakastyyppi) {
+    case 'o':
+      lounaanHinta = 3.20;
+      break;
+    case 'h':
+      lounaanHinta = 6.10;
+      break;
+    case 'm':
+      lounaanHinta = 9.50;
+      break;
+    default:
+      alert('syötit virheellisen asiakastunnuksen käynnistä ohjelma uudestaan.');
+  }
+
+  if (lounaanHinta>=0) {
+    console.log(`lounaasi hinta maksaa ${lounaanHinta}`)
+  }
+</script>
+
+</body>
+</html>
