@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-4. Daredevil</title>
+</head>
+<body>
+    <h1>1-4. Daredevil</h1>
+    <p id="target"></p>
+    <script>
+      'use strict';
+
+      let name, rand, house;
+
+      name = prompt('Tell your name to recieve your new house');
+      rand = Math.floor(Math.random() * 4 + 1);
+
+      switch (rand) {
+          case 1:
+              house = 'Daredevil';
+              break;
+          case 2:
+              house = 'Slytherin';
+              break;
+          case 3:
+              house = 'Hufflepuff';
+              break;
+          case 4:
+              house = 'Ravenclaw';
+              break;
+          default:
+              house = '?';
+      }
+
+      document.querySelector('#target').innerHTML = name + ', you are ' + house;
+    </script>
+</body>
+</html>
