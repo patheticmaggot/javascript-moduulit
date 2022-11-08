@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-6. square root calculator</title>
+</head>
+<body>
+    <h1>1-6. square root calculator</h1>
+    <p id="target"></p>
+    <script>
+      'use strict';
+
+      let conf, num;
+
+      conf = confirm('Should I calculate the square root?')
+      if (conf === false) {
+          document.querySelector('#target').innerHTML =  'The square root is not calculated.'
+      } else if (conf === true){
+          num = parseFloat(prompt('Give a number to be calculated:'))
+          if (Math.sign(num) === 1) {
+              document.querySelector('#target').innerHTML = 'The square root is: '+ Math.sqrt(num);
+          } else {
+              document.querySelector('#target').innerHTML = 'The square root of a negative number is not defined'
+          }
+      } else {
+          document.querySelector('#target').innerHTML = 'Not working...';
+      }
+    </script>
+</body>
+</html>
