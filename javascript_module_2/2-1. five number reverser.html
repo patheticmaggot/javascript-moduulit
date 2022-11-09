@@ -9,7 +9,7 @@
     <p id="target"></p>
     <script>
         'use strict';
-
+        const target = document.querySelector('#target')
         let i, k;
         const th = ['first', 'second', 'the middle', 'second to last', 'last'];
         const numbers = [];
@@ -22,7 +22,7 @@
         for (k = 4; k >= 0; k--) {
             reversenumbers.push(numbers[(k)])
         }
-        document.querySelector('#target').innerHTML = reversenumbers;
+        target.innerHTML = reversenumbers;
 
     </script>
 </body>
