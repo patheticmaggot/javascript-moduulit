@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-8. leap year list</title>
+</head>
+<body>
+    <h1>1-8. leap year list</h1>
+    <ul id="target"></ul>
+    <script>
+      'use strict';
+
+      let yearstart, yearend, yearlist = [], i, k, listitem;
+
+      yearstart = parseInt(prompt('Give start year:'));
+      yearend = parseInt(prompt('Give end year:'));
+      for (i=yearstart; i<=yearend; i++) {
+        if (i%100 === 0) {
+            if (i%400 === 0) {
+                yearlist.push(i);
+            }
+        } else if (i%4 === 0) {
+            yearlist.push(i);
+        }
+      }
+      for (k = 0; k < yearlist.length; ++k) {
+      listitem = document.createElement('li');
+      listitem.innerHTML = yearlist[k];
+      document.querySelector('#target').appendChild(listitem);
+      }
+    </script>
+</body>
+</html>
