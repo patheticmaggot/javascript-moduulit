@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-2. participant sorter</title>
+</head>
+<body>
+    <h1>2-2. participant sorter</h1>
+    <ul id="target"></ul>
+    <script>
+        'use strict';
+        const target = document.querySelector('#target');
+        const party = [];
+        let listitem, partynum, i, k;
+
+        partynum = parseInt(prompt('Give the ammount of participants'));
+        for (i=0; i<partynum; i++) {
+            party.push(prompt('Keep giving names until everyone is in'));
+        }
+        party.sort();
+        for (k = 0; k < party.length; k++) {
+        listitem = document.createElement('li');
+        listitem.innerHTML = party[k];
+        document.querySelector('#target').appendChild(listitem);
+        }
+    </script>
+</body>`
+</html>
