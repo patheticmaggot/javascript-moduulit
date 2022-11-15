@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-10. voting system</title>
+</head>
+<body>
+    <h1>2-10. voting system</h1>
+    <p id="target"></p>
+    <script>
+        'use strict';
+        const target = document.querySelector('#target');
+        const candidates = [];
+        let candnum, voternum, candidate, maxvotes = 0, winner, i, k;
+
+        candnum = parseInt(prompt('Give the number of candidates'));
+
+        for (i=0; i<candnum; i++) {
+          candidates.push({name: prompt('Name for candidate '+ (i+1)), votes: 0});
+        }
+
+        voternum = parseInt(prompt('Give the number of voters'));
+
+        for (i=0; i<voternum; i++) {
+          candidate = (prompt('voter '+ (i+1) +' who will you vote for?'));
+          for (k=0; k<candnum; k++) {
+            if (candidates[k].name === candidate) {
+              candidates[k].votes++
+            }
+          }
+        }
+        for (i=0; i<candnum; i++) {
+          if (candidates[i].votes > maxvotes) {
+            maxvotes = candidates[i].votes
+            winner = candidates[i].name
+          }
+        }
+
+        console.log('The winner is '+ winner +' with '+ maxvotes +' votes.\n results: \n');
+        for (i=0; i<candnum; i++) {
+          console.log(candidates[i].name +': '+ candidates[i].votes +' votes\n')
+        }
+    </script>
+</body>`
+</html>
