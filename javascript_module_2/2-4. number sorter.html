@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>number sorter</title>
 </head>
 <body>
+    <h1>number sorter</h1>
+    <p id="target"></p>
+    <script>
+        'use strict';
+        const thelist = [];
+        let add;
 
+        do {
+          add = parseFloat(prompt('Give numbers. end with 0'));
+          thelist.push(add);
+          console.log(add);
+        } while (add !== 0);
+
+        thelist.sort(function(a, b){return a-b});
+        thelist.reverse();
+
+        console.log(thelist);
+    </script>
 </body>
 </html>
