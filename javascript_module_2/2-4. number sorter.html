@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>number sorter</title>
+    <title>2-4. number sorter</title>
 </head>
 <body>
-    <h1>number sorter</h1>
+    <h1>2-4. number sorter</h1>
     <p id="target"></p>
     <script>
         'use strict';
         const thelist = [];
-        let add;
+        let add, i;
 
         do {
           add = parseFloat(prompt('Give numbers. end with 0'));
@@ -20,7 +20,9 @@
         thelist.sort(function(a, b){return a-b});
         thelist.reverse();
 
-        console.log(thelist);
+        for (i=0; i<thelist.length; i++) {
+            console.log(thelist[i])
+        }
     </script>
 </body>
 </html>
