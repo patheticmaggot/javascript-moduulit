@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-3. dog reverser</title>
+</head>
+<body>
+    <h1>2-3. dog reverser</h1>
+    <ul id="target"></ul>
+    <script>
+        'use strict';
+        const target = document.querySelector('#target');
+        const party = [];
+        let listitem, i, k;
+
+        for (i=0; i<6; i++) {
+            party.push(prompt('Give a dog name six times'));
+        }
+        party.sort();
+        party.reverse();
+        for (k = 0; k < 6; k++) {
+        listitem = document.createElement('li');
+        listitem.innerHTML = party[k];
+        document.querySelector('#target').appendChild(listitem);
+        }
+    </script>
+</body>
+</html>
