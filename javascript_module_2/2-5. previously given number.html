@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pohja</title>
+</head>
+<body>
+    <h1>pohja</h1>
+    <p id="target"></p>
+    <script>
+        'use strict';
+        const thelist = []
+        let add, i, end = false;
+
+        do {
+            add = parseFloat(prompt('Give different numbers or end with the same.'))
+            for (i=0; i<thelist.length; i++) {
+                if (thelist[i] === add) {
+                    end = true
+                    console.log('Number '+ add +' has already been given')
+                    break
+                }
+            }
+            if (end === false){
+                thelist.push(add)
+            }
+        } while (end === false);
+
+        thelist.sort(function(a, b){return a-b});
+
+        for (i=0; i<thelist.length; i++) {
+            console.log(thelist[i])
+        }
+    </script>
+</body>
+</html>
