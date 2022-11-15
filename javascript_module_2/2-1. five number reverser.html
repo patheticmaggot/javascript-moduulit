@@ -13,16 +13,17 @@
         let i, k;
         const th = ['first', 'second', 'the middle', 'second to last', 'last'];
         const numbers = [];
-        const reversenumbers = []
+        const reversenumbers = [];
 
         for (i = 0; i < 5; i++) {
             numbers.push(parseFloat(prompt('Give ' + th[i] + ' number')));
-            console.log(numbers);
         }
         for (k = 4; k >= 0; k--) {
-            reversenumbers.push(numbers[(k)])
+            reversenumbers.push(numbers[(k)]);
         }
-        console.log(reversenumbers);
+        for (i=0; i<reversenumbers.length; i++) {
+            console.log(reversenumbers[i]);
+        }
 
     </script>
 </body>
