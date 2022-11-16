@@ -25,20 +25,20 @@
             candidate = (prompt('voter '+ (i+1) +' who will you vote for?'));
             for (k=0; k<candnum; k++) {
                 if (candidates[k].name === candidate) {
-                    candidates[k].votes++
+                    candidates[k].votes++;
                 }
             }
         }
         for (i=0; i<candnum; i++) {
             if (candidates[i].votes > maxvotes) {
-                maxvotes = candidates[i].votes
-                winner = candidates[i].name
+                maxvotes = candidates[i].votes;
+                winner = candidates[i].name;
             }
         }
 
         console.log('The winner is '+ winner +' with '+ maxvotes +' votes.\n results: \n');
         for (i=0; i<candnum; i++) {
-            console.log(candidates[i].name +': '+ candidates[i].votes +' votes\n')
+            console.log(candidates[i].name +': '+ candidates[i].votes +' votes\n');
         }
     </script>
 </body>
